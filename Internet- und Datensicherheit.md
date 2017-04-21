@@ -1,17 +1,9 @@
-<p style="margin-top: 200px"/>
+# Internet- und Datensicherheit
 
-# Internetanwendungen 1
-
-Eine begleitende Dokumentation der Vorlesung "Internetanwendungen 1" 
+Eine begleitende Dokumentation der Vorlesung "Internet- und Datensicherheit" 
 Informatik.Softwaresysteme, 4. Fachsemester 
 
 ## Hinweise
-
-Thema der Vorträge: "Sicherheit"
-
-Praktikumsanmeldung im QIS-Portal
-
-Moodle-Schlüssel: INA1
 
 Erstellt durch
 Miguel Oppermann
