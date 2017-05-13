@@ -1,7 +1,3 @@
----
-layout: default
----
-
 # Internetanwendungen 1
 
 Eine begleitende Dokumentation der Vorlesung "Internetanwendungen 1" 
