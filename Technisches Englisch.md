@@ -13,10 +13,10 @@ Mat.Nr.: 201522202
 
 1. [Theorie](#Theorie)
 	1. [Grundlagen](#Grundlagen)
-	2. [Griechische Zeichen](#Griechische Zeichen)
+	2. [Griechische-Zeichen](#Griechische-Zeichen)
 	3. [Mathematik](#Mathematik)
 	4. [Diagramme](#Diagramme)
-	5. [Flow Charts](#Flow Charts)
+	5. [Flow-Charts](#Flow-Charts)
 	6. [Transistoren](#Transistoren)
 	7. [GUIs](#GUIs)
 	8. [VPNs](#VPNs)
