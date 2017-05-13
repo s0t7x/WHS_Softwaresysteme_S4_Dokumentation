@@ -7,6 +7,7 @@ Diese Dokumentation **ersetzt keine** vollständige Vorlesung. Ggf. werden viele
 
 # To-Do Liste
   24.04 / 01.05 Thomas nach Mitschrift für Kryptografie fragen
+  
   Bendix nach Präsentation zu den Biometrischen Systemen fragen
   
 ## Danksagung
