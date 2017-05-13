@@ -11,11 +11,6 @@ Praktikumsanmeldung im QIS-Portal
 
 Moodle-Schlüssel: INA1
 
-Erstellt durch
-Miguel Oppermann
-
-Mat.Nr.: 201522202
-
 ## Inhalt
 
 1. [Theorie](#Theorie)
