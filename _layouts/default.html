@@ -38,9 +38,8 @@
       </header>
       <section>
       <div markdown="1"> 
-      
-      {% include_relative /Internetanwendung1.md %}
-       
+      {% capture internetanwendung1 %}{% include_relative Internetanwendung1.md %}{% endcapture %}
+      {{ internetanwendung1 | markdownify }}
         </div>
       </section>
       <footer>
