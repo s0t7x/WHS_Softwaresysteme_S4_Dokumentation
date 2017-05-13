@@ -1,6 +1,7 @@
 # Technisches Englisch
 
-Eine begleitende Dokumentation der Vorlesung "Technisches Englisch" 
+Eine begleitende Dokumentation der Vorlesung "Technisches Englisch"
+
 Informatik.Softwaresysteme, 4. Fachsemester 
 
 ## Hinweise
