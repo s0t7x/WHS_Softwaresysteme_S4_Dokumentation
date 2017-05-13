@@ -26,6 +26,8 @@ layout: default
           <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ github_name }}</small></a></p>
         {% endif %}
 
+        {{ content }}
+        
         {% if site.github.is_user_page %}
           <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
         {% endif %}
@@ -40,7 +42,6 @@ layout: default
       </header>
       <section>
               
-      {{ content }}
       {% include_relative ../Internetanwendung1.md %}  
 
       </section>
