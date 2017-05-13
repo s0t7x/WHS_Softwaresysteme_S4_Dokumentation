@@ -11,3 +11,5 @@ Diese Dokumentation **ersetzt keine** vollständige Vorlesung. Ggf. werden viele
   
 ## Danksagung
 an alle Beteiligten und Interessierten
+
+Screenshots und Bilder werden von [Catbox.moe](https://catbox.moe/) gehostet, vielen Dank für diesen tollen Service!
