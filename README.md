@@ -6,8 +6,8 @@ Es wird keine Verantwortung für die Vollständigkeit übernommen.
 Diese Dokumentation **ersetzt keine** vollständige Vorlesung. Ggf. werden viele Details ausgelassen.
 
 # To-Do Liste
-  - 24.04 / 01.05 Thomas nach Mitschrift für Kryptografie fragen
-  - Bendix nach Präsentation zu den Biometrischen Systemen fragen
+  24.04 / 01.05 Thomas nach Mitschrift für Kryptografie fragen
+  Bendix nach Präsentation zu den Biometrischen Systemen fragen
   
 ## Danksagung
 an alle Beteiligten und Interessierten
