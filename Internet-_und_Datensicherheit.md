@@ -3,13 +3,6 @@
 Eine begleitende Dokumentation der Vorlesung "Internet- und Datensicherheit" 
 Informatik.Softwaresysteme, 4. Fachsemester 
 
-## Hinweise
-
-Erstellt durch
-Miguel Oppermann
-
-Mat.Nr.: 201522202
-
 ## Inhalt
 
 1. [Theorie](#Theorie)
