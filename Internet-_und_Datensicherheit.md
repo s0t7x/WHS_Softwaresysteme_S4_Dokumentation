@@ -137,6 +137,19 @@ s^ö mod n = ŝ
 ŝ^p mod n = s
 ```
 
+Es existiert ein bekanntes Problem, weswegen RSA keinesfalls trivial ist!
+Angenommen wir haben den Wert 35 und wir wissen nicht, dass 5 * 7 = 35 ist.
+> 35 = 36 - 1 = 6²-1² = (6-1) * (6+1) = 5 * 7
+
+Durch das selbe Zerlegunsprinzip lassen sich in der Theorie auch **alle** privaten Schlüssel berechnen.
+Die Verschlüsselung ist also nur so gut, wie die Unfähigkeit des Menschen eine Zahl zu zerlegen.
+
+> 187 = 196 - 9 = (14-3) * (14+3) = 11 * 17
+
+Grundsätzlich lässt sich nämlich **jede Zahl der Welt** in die Differenz zweier Quadrate zerlegen. Sogar **Primzahlen!**
+So etwas nennt sich ein quadratisches Sieb. Damit lassen sich Primzahlen finden.
+
+
 # Anwendungsentwicklung
 ## Euklidscher Algorithmus in Python3
 ```python
