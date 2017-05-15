@@ -81,7 +81,7 @@ Also:
 - Die Summe kann dann wieder durch 2 geteilt werden, bis sie ungerade ist.
 - Diese Schritte wiederholen sich bis zur Abbruchbedingung: **a == b**
 	
-### Anwendung
+### Anwendung in der Praxis
 Angenommen *a* und *b* sind teilerfremd, also der GGT beider Zahlen ist 1!
 
 > a * b mod n = 1
@@ -115,10 +115,15 @@ EUCLID(a,b)
 3  sonst return EUCLID(b, a mod b)
 ```
 
+
+
+
+
+
 # Anwendungsentwicklung
 ## Euklidscher Algorithmus in Python3
-```python3
-#!/usr/bin/phyton3
+```python
+#!/usr/bin/python3
 
 import sys
 
