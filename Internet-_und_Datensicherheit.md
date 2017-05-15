@@ -80,3 +80,20 @@ Also:
 - Die Summe kann dann wieder durch 2 geteilt werden, bis sie ungerade ist.
 - Diese Schritte wiederholen sich bis zur Abbruchbedingung: **a == b**
 	
+### Anwendung
+Angenommen *a* und *b* sind teilerfremd, also der GGT beider Zahlen ist 1!
+
+> a * b mod n = 1
+
+Wenn wir *a* kennen, wollen wir *b* berechnen.*a* wird später **öffentlicher Schlüssel** und *b* wird **privater Schlüssel** genannt.
+
+> 1 = a*b+c*n = a*b mod n
+
+bspw. 7 = öffentlicher Schlüssel; x = privater Schlüssel
+> 1 = 7*x mod 60
+> x = ?
+
+> a=60; b=7; r=|a/b|=8; [ s=; t=; u=; v=; ]
+> a = 60 - 8*7
+
+> a=4; b=3-7=4; r=|a/b|=1;
