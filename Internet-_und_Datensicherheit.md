@@ -9,6 +9,7 @@ Informatik.Softwaresysteme, 4. Fachsemester
 	1. [Grundlagen](#Grundlagen)
 	2. [Diffie-Hellman](#DiffieHellman)
 	3. [Euklidischer Algorithmus](#EuklidischerAlgorithmus)
+	4. [RSA Signatur und Verschlüsselung](#RSA)
 2. [Anwendungsentwicklung](#Anwendungsentwicklung)
 	1. [Euklidscher Algorithmus in Python3](#EuklidInPython)
 
@@ -38,7 +39,7 @@ Unter Software-Hygiene fällt also:
 	- Fehler sollten **nie** geheim bleiben! Veröffentlichungen von Fehlern tragen zur Sicherheit bei!
 	
 ## Diffie-Hellmann Public-Key-Encryption
-
+lorem ipsum - TO BE FILLED -
 
 ## Euklidischer Algorithmus (Erweiterter Euklid)
 Wie oft ist 95 durch 30 in einer Ganzzahl teilbar?
@@ -115,10 +116,26 @@ EUCLID(a,b)
 3  sonst return EUCLID(b, a mod b)
 ```
 
+## RSA Signatur und Verschlüsselung
+Signieren:
+```
+Hash(DOCUMENT) = h;
+private Key = p
+public Key = ö
 
+h^p mod n = ĥ
+ĥ^ö mod n = h
+```
 
+Verschlüsseln:
+```
+Document = s
+private key = p
+public key = ö
 
-
+s^ö mod n = ŝ
+ŝ^p mod n = s
+```
 
 # Anwendungsentwicklung
 ## Euklidscher Algorithmus in Python3
