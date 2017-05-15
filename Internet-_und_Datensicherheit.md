@@ -91,9 +91,25 @@ Wenn wir *a* kennen, wollen wir *b* berechnen.*a* wird später **öffentlicher S
 
 bspw. 7 = öffentlicher Schlüssel; x = privater Schlüssel
 > 1 = 7*x mod 60
+
 > x = ?
 
-> a=60; b=7; r=|a/b|=8; [ s=; t=; u=; v=; ]
+> a(0)=60; b(0)=7; r=|a/b|=8; [ s=; t=; u=; v=; ]
+
 > a = 60 - 8*7
 
-> a=4; b=3-7=4; r=|a/b|=1;
+> a=4; b=3=7-4; r=|a/b|=1;
+
+> a=4-3=1; usw....
+
+> s=1; t=0; u=0; v=1;
+
+**a(n)=s(n)*a(0)+t(n)*b(0) - *bzw* - b(n)=u(n)*a(0)+v(n)*b(0)**
+
+**Ein Beispiel in Pseudocode:**
+```
+EUCLID(a,b)
+1  wenn b = 0
+2      dann return a
+3  sonst return EUCLID(b, a mod b)
+```
