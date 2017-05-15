@@ -10,6 +10,7 @@ Informatik.Softwaresysteme, 4. Fachsemester
 	2. [Diffie-Hellman](#DiffieHellman)
 	3. [Euklidischer Algorithmus](#EuklidischerAlgorithmus)
 2. [Anwendungsentwicklung](#Anwendungsentwicklung)
+	1. [Euklidscher Algorithmus in Python3](#EuklidInPython)
 
 # Theorie
 
@@ -112,4 +113,21 @@ EUCLID(a,b)
 1  wenn b = 0
 2      dann return a
 3  sonst return EUCLID(b, a mod b)
+```
+
+# Anwendungsentwicklung
+## Euklidscher Algorithmus in Python3
+```python3
+#!/usr/bin/phyton3
+
+import sys
+
+def euklid(a,b):
+        if b == 0:
+                return a
+        return euklid(b, a % b)
+if len(sys.argv) == 3:
+    print(euklid(int(sys.argv[1]),int(sys.argv[2])))
+else:
+    print("Usage: euklid.py a b; where a and b have to be int")
 ```
