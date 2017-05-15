@@ -64,15 +64,19 @@ Werden diese Regeln rekursiv programmiert, liefert das Programm immer den größ
 
 ### Beispiel
 > a=164830, b=27388
+
 Beide werden *n-mal* durch 2 geteilt. An einem bestimmten Zeitpunkt sind entweder beide oder zumindest eine Zahl ungerade! Die Anzahl der Schritte *n* wird vermerkt.
 Sind beide ungerade, wird die kleinere Zahl von der größeren abgezogen.
+
 > a=82415, b=6847, n=2
+
 > c=a-b=75568
+
 Nun wird der neue Wert c erneut *n-mal* durch 2 geteilt, bis der Wert ungerade ist. Dann wird wieder die kleinere von der größeren Zahl abgezogen.
 
 Also:
-	- Am Anfang werden beide Zahlen durch 2 geteilt, bis mindestens eine ungerade ist. Falls eine gerade bleibt, wird sie weiterhin durch 2 geteilt.
-	- Zieht man eine ungerade Zahl von einer ungeraden Zahl ab, wird das Ergebnis **definitiv** gerade sein.
-	- Die Summe kann dann wieder durch 2 geteilt werden, bis sie ungerade ist.
-	- Diese Schritte wiederholen sich bis zur Abbruchbedingung: **a == b**
+- Am Anfang werden beide Zahlen durch 2 geteilt, bis mindestens eine ungerade ist. Falls eine gerade bleibt, wird sie weiterhin durch 2 geteilt.
+- Zieht man eine ungerade Zahl von einer ungeraden Zahl ab, wird das Ergebnis **definitiv** gerade sein.
+- Die Summe kann dann wieder durch 2 geteilt werden, bis sie ungerade ist.
+- Diese Schritte wiederholen sich bis zur Abbruchbedingung: **a == b**
 	
