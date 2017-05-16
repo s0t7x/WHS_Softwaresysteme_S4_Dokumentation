@@ -6,7 +6,7 @@ Informatik.Softwaresysteme, 4. Fachsemester
 ## Inhalt
 
 1. [Theorie](#Theorie)
-
+	1. [Elliptische-Kurven-Kryptographie](#ElliptischeKurvenKryptographie)
 2. [Anwendungsentwicklung](#Anwendungsentwicklung)
 
 
@@ -102,7 +102,7 @@ Eingabe: Endliche zyklische Gruppe {\displaystyle G} G, Erzeuger {\displaystyle 
 
 Ausgabe: {\displaystyle x:=\log _{g}a} x:=\log_g a mit {\displaystyle g^{x}=a} g^x=a
 
-> Berechne n:=|G|, m:=[sqrt{n}]
-> Für alle j in {0, ... ,m-1}: Berechne g^{j} und speichere (j,g^j) in einer Tabelle.
-> Für alle i in {0, ... ,m-1}: Berechne a(g^{-m})^i und suche danach in der zweiten Spalte der Tabelle. Wenn gefunden, gib im+j aus.
-> Wegen a(g^{-m})^i = a(g^{-m})^{i-1}g^{-m} lässt sich das Gruppenelement im letzten Schritt leicht aus dem der vorhergehenden Iteration berechnen
+1. Berechne n:=|G|, m:=[sqrt{n}]
+2. Für alle j in {0, ... ,m-1}: Berechne g^{j} und speichere (j,g^j) in einer Tabelle.
+3. Für alle i in {0, ... ,m-1}: Berechne a(g^{-m})^i und suche danach in der zweiten Spalte der Tabelle. Wenn gefunden, gib im+j aus.
+4. Wegen a(g^{-m})^i = a(g^{-m})^{i-1}g^{-m} lässt sich das Gruppenelement im letzten Schritt leicht aus dem der vorhergehenden Iteration berechnen
