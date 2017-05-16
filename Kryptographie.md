@@ -32,9 +32,9 @@ Angenommen #E = 35:
 
 g baut also eine Gruppe mit der Größe 35 oder größer.
 
-| 0 | 1 | 2 | 3 | 4 | 5 | ... | 10 | ... | 15 | ... | 20 | ... | 25 | 26 | 27 | 28 | 29 | 30 | ... | 40 |
-| - | - | - | - | - | - | --- | -- | --- | -- | --- | -- | --- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | --- | -- |
-| id | g | g^2 | g^3 | g^4 | id | ... | id | ... | id | ... | id | ... | id | g | g^2 | g^2 | g^-1 | id | ... | id |
+| 0 | 1 | 2 | 3 | 4 | 5 | ... | 10 | ... | 15 | ... | 20 | ... | 25 | ... | 30 | ... | 40 |
+| - | - | - | - | - | - | --- | -- | --- | -- | --- | -- | --- | -- | --- | -- | --- | -- |
+| id | g | g^2 | g^3 | g^4 | id | ... | id | ... | id | ... | id | ... | id | ... | id | ... | id |
 
 **Genau** an der Stell #E=35 liegt für **ALLE** die id.
 Die eigentliche Gruppengröße bleibt vorerst verborgen.
