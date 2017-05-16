@@ -48,7 +48,6 @@ Dann wird berechnet:
 
 > k = u + m
 
-> g^k = 
 ```
 		     u+m=k   g~
 -----------------|-----|---{-/\-}----|
@@ -62,6 +61,7 @@ Das Intervall hat die Länge 2m+1
 Das gewählte m ist in diesem Falle egal.
 Die schnellste Laufzeit wäre m = (q^1/2)^1/2
 ```
+
 g~ prüft genau den Intervall hinter m. Dies kann hoch multipliziert werden, um das zu testende Intervall zu verschieben.
 
 Wenn g^k in der Menge drin sitzt, befindet sich in der Nähe auf jeden Fall eine id. Ist g^k zufälligerweise g(2) dann liegt die id 2 vor g(2). Wird g^k berechnet wird zu aller erst geprüft ob das x(k) sich in der Menge befindet. Dann prüft man ob das y(k) sich in der Menge befindet.
@@ -78,6 +78,7 @@ Angenommen: g^a = id
 Wissen wollen wir die Grupengröße von g(1).
 a ist auf jeden Fall durch die Gruppengröße teilbar.
 Also:
+
 > g^a = id = g^p(1) * g^p(2) * g^p(...) * ...
 
 Es wird g^(a/p(1)) == id geprüft!
@@ -86,14 +87,17 @@ Das neue a wird dabei zu a/p(...) gesetzt.
 a wird dann so lange durch die zerlegten Primfaktoren geteilt, bis es nicht mehr möglich ist.
 Dann haben wir die kleinstmögliche Gruppengröße.
 Dann gilt:
+
 > g(1) -> g(1)^(a(1)) = id
 
 > g(2) -> g(2)^(a(2)) = id
 
 ```
+
         #E
 ---------------------
 KGV(a(1)*a(2)*a(...))
+
 ```
 
 Folgend bildet sich der "Baby-Step-Giant-Step" Algorithmus:
