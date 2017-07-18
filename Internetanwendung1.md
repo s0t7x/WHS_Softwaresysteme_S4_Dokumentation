@@ -11,15 +11,6 @@ Praktikumsanmeldung im QIS-Portal
 
 Moodle-Schlüssel: INA1
 
-## Inhalt
-
-1. [Grundlagen](#Grundlagen)
-2. [Modelle](#Modelle)
-3. [Client-Server-Architektur](#Client-Server-Architektur)
-4. [Netzwerk-Programmierung](#Netzwerk-Programmierung)
-
-
-
 ## Grundlagen
 
 ### Was sind Internetanwendungen?
