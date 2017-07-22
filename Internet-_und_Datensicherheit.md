@@ -168,3 +168,191 @@ else:
     print("Usage: euklid.py a b; where a and b have to be int")
 ```
 ## RSA in Python3
+```python
+# RSA
+
+# Imports
+import random
+import sys
+
+sys.maxsize = sys.maxsize*sys.maxsize
+
+# INPUT: Secure parameter l
+def Generation(l=42):
+    # Randomly select 2 primes with same Bitlength l/2
+    print("Randomly selecting 2 secret primes with same bitlength. This could take a while...")
+    p = Randomly_Select_Prime_w_Bitlength(int(l)/2)
+    q = Randomly_Select_Prime_w_Bitlength(int(l)/2)
+    # Compute
+    print("Computing...")
+    n = p * q
+    phi = (p - 1) * (q - 1)
+    # Select an arbitrary integer e with 1 < e < phi and gcd(e,phi) == 1
+    print("Generating arbitrary integer...")
+    e = int(Arbitrary_Int_e(phi))
+    # Compute the integer d statisfying 1 < d < phi and e*d == 1 % phi
+    print("Generating private Key")
+    d = inverse(e, phi)
+    # Return n e d
+    e = "Public Key = " + (str(e))
+    d = "Private Key = " + (str(d))
+    n = "N = " + str(n)
+    print("\n" + e)
+    print(d)
+    print(n + "\n")
+    return e, d, n
+
+# INPUT: RSA public key e, n, message m
+def Encryption(e, n, m):
+    print("Encrypting '" + m + "' with public key = " + e)
+    c = [pow(ord(char),int(e),int(n)) for char in m]
+    print("Encrypted Cipher:")
+    print(':'.join(map(lambda x: str(x), c)))
+    return ':'.join(map(lambda x: str(x), c))
+
+# INPUT: RSA private key d, n, ciphertext c
+def Decryption(d, n, c):
+    print("Decrypting Cipher with private key = " + d)
+    c = c.split(":")
+    m = [chr(pow(int(char), int(d), int(n))) for char in c]
+    print("Decrypted Cipher:")
+    print(''.join(m))
+    return ''.join(m)
+
+# Miller-Rabin-Algorhthmus
+def mrt(odd_int):
+    odd_int = int(odd_int)
+    rng = odd_int - 2
+    n1 = odd_int - 1
+    _a = [i for i in range(2,rng)]
+    a = random.choice(_a)
+    d = n1 >> 1
+    j = 1
+    while((d&1)==0):
+        d = d >> 1
+        j += 1
+    t = a
+    p = a
+    while(d>0):
+        d = d>>1
+        p = p*p % odd_int
+        if(d&1):
+            t = t*p % odd_int
+    if(t == 1 or t == n1):
+        return True
+    for i in range(1,j):
+        t = t*t % odd_int
+        if(t==n1):
+            return True
+        if(t<=1):
+            break
+    return False
+
+def gcd(a, b):
+    while b:
+        a, b = b, a%b
+    return a
+
+def is_prime(n):
+    for i in range(3, n):
+        if n % i == 0:
+            return False
+    return True
+
+def Randomly_Select_Prime_w_Bitlength(l):
+    prime = random.getrandbits(int(l))
+    if (prime % 2 == 1 and prime > 3):
+        #if is_prime(prime):
+        if (mrt(prime)):
+        #if prime % 2 == 1:
+            return prime
+    return Randomly_Select_Prime_w_Bitlength(l)
+
+def Arbitrary_Int_e(phi):
+    e = random.randrange(1, phi)
+    #_e = [i for i in range(1, phi)]
+    #e = random.choice(_e)
+    if(gcd(e, phi) == 1 % phi):
+        return e
+    return Arbitrary_Int_e(phi)
+
+def inverse(e, phi):
+    a, b, u = 0, phi, 1
+    while(e > 0):
+        q = b // e
+        e, a, b, u = b % e, u, e, a-q*u
+    if (b == 1):
+        return a % phi
+    else:
+        print("Must be coprime!")    
+
+def query_yes_no(question, default="yes"):
+    valid = {"yes": True, "y": True,
+             "no": False, "n": False}
+    if default is None:
+        prompt = " [y/n] "
+    elif default == "yes":
+        prompt = " [Y/n] "
+    elif default == "no":
+        prompt = " [y/N] "
+    else:
+        raise ValueError("invalid default answer: '%s'" % default)
+
+    while True:
+        sys.stdout.write(question + prompt)
+        choice = input().lower()
+        if default is not None and choice == '':
+            return valid[default]
+        elif choice in valid:
+            return valid[choice]
+        else:
+            sys.stdout.write("Please respond with 'yes' or 'no' "
+                             "(or 'y' or 'n').\n")
+
+if len(sys.argv) > 1:
+    if sys.argv[1] == "generate":
+        if len(sys.argv) == 2:
+            key = Generation()
+            if query_yes_no("Save generated Keys to File?"):
+                _key = '\n'.join(key)
+                fo = open("Keypair.txt", "w")
+                fo.write(_key)
+                fo.close()
+                print("Succesfully saved to 'Keypair.txt'. Keep in mind to NOT overwrite this!")
+
+        if len(sys.argv) == 3:
+            key = Generation(sys.argv[2])
+            if query_yes_no("Save generated Keys to File?"):
+                _key = '\n'.join(key)
+                fo = open("Keypair.txt", "w")
+                fo.write(_key)
+                fo.close()
+                print("Succesfully saved to 'Keypair.txt'. Keep in mind to NOT overwrite this!")
+        elif not len(sys.argv) == 2:
+            print("Missing parameters.")
+    if sys.argv[1] == "encrypt":
+        if len(sys.argv) == 5:
+            key = Encryption(sys.argv[2], sys.argv[3], sys.argv[4])
+            if query_yes_no("Save cipher to File?"):
+                fo = open("cipher.txt", "w")
+                fo.write(key)
+                fo.close()
+                print("Succesfully saved to 'cipher.txt'. Keep in mind to NOT overwrite this!")
+        else:
+            print("Missing parameters.")
+    if sys.argv[1] == "decrypt":
+        if len(sys.argv) == 5:
+            Decryption(sys.argv[2], sys.argv[3], sys.argv[4])
+        elif len(sys.argv) == 4:
+            print("Please enter Filename: ")
+            name = input()
+            fo = open(name)
+            cipher = fo.read()
+            fo.close()
+            Decryption(sys.argv[2], sys.argv[3], cipher)
+        else:
+            print("Missing parameters.")
+else:
+    print("Missing parameters.")
+
+```
